@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content_professions %}
+
+    {% if list_type == "ul" %}
+    <ul>
+        {% for user in user_list %}
+        <li>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    {%  if list_type == "ul" %}  </ol> {% endif %}
+
+{% endblock %}
