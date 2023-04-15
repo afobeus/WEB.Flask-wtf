@@ -22,7 +22,7 @@ def list_prof(list_type):
                         "инженер жизнеобеспечения", "метеоролог", "оператор марсохода",
                         "киберинженер", "штурман", "пилот дронов"]
 
-    return render_template("professions.html", list_type=list_type)
+    return render_template("professions.html", list_type=list_type, professions_list=professions_list)
 
 
 if __name__ == '__main__':

@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 
 {% block content_professions %}
-
+    <h2>Список профессий</h2>
     {% if list_type == "ul" %}
-    <ul>
-        {% for user in user_list %}
-        <li>
-        </li>
-        {% endfor %}
-    </ul>
+        <ul>
+            {% for profession in professions_list %}
+                <li>{{ profession }}</li>
+            {% endfor %}
+        </ul>
+    {% elif list_type == "ol" %}
+        <ol>
+            {% for profession in professions_list %}
+                <li>{{ profession }}</li>
+            {% endfor %}
+        </ol>
     {% else %}
-    {%  if list_type == "ul" %}  </ol> {% endif %}
+        <p>Неверный ввод</p>
+    {% endif %}
 
 {% endblock %}
