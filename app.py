@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
+
 
 app = Flask(__name__)
 
@@ -23,6 +24,19 @@ def list_prof(list_type):
                         "киберинженер", "штурман", "пилот дронов"]
 
     return render_template("professions.html", list_type=list_type, professions_list=professions_list)
+
+
+@app.route('/answer')
+def login():
+    values = {"title": "Анкета",
+              "surname": "Wanty",
+              "name": "Mark",
+              "education": "выше среднего",
+              "profession": "штурман марсохода",
+              "sex": "male",
+              "motivation": "Всегда мечтал застрять на Марсе!",
+              "ready": "True"}
+    return render_template("answer.html", **values)
 
 
 if __name__ == '__main__':
