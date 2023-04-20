@@ -45,8 +45,7 @@ def login():
 @app.route('/')
 def works_log():
     db_sess = db_session.create_session()
-    jobs = db_sess.query(Jobs).join(User, User.id == Jobs.team_leader).all()
-    print(jobs)
+    jobs = db_sess.query(Jobs).join(User, Jobs.team_leader == User.id).all()
     return render_template("works_log.html", jobs=jobs)
 
 

@@ -15,7 +15,7 @@
             </tr>
             <tr class="table-light">
                 <td>{{job.job}}</td>
-                <td>gu</td>
+                <td>{{job.team_leader_user.name}} {{job.team_leader_user.surname}}</td>
                 <td>{{job.work_size}} hours</td>
                 <td>{{job.collaborators}}</td>
                 {% if job.is_finished %}
