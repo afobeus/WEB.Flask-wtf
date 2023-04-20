@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from data import db_session
+from data.users import User
 from data.jobs import Jobs
 
 
@@ -44,7 +45,8 @@ def login():
 @app.route('/')
 def works_log():
     db_sess = db_session.create_session()
-    jobs = db_sess.query(Jobs).all()
+    jobs = db_sess.query(Jobs).join(User, User.id == Jobs.team_leader).all()
+    print(jobs)
     return render_template("works_log.html", jobs=jobs)
 
 
