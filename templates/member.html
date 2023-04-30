@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set item = items|random %}
+    <div class="centered">
+    <h2>{{ item["name"] }}</h2>
+    <img src="{{ item.pic_path }}">
+    <p> {{ item.professions }} </p>
+    </div>
+{% endblock %}

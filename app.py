@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, render_template, redirect
 from data import db_session
 from data.users import User
@@ -97,6 +99,13 @@ def table(sex, age):
         else:
             color_param = "red"
     return render_template('table.html', color=color_param, age=age_param)
+
+
+@app.route('/member')
+def member():
+    with open('templates/crew.json', encoding="utf-8") as file:
+        items = json.load(file)
+    return render_template('member.html', items=items)
 
 
 if __name__ == '__main__':

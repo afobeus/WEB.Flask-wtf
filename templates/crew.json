@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Ридли",
+    "surname": "Скотт",
+    "pic_path": "/static/images/ava_1.png",
+    "professions": "астрогеолог специалист по радиационной защите"
+  },
+  {
+    "name": "Энди",
+    "surname": "Уир",
+    "pic_path": "/static/images/ava_2.png",
+    "professions": "географ специалист по обычной защите"
+  },
+  {
+    "name": "Марк",
+    "surname": "Уотни",
+    "pic_path": "/static/images/ava_3.png",
+    "professions": "микро-биолог специалист по деградации полимеров"
+  },
+  {
+    "name": "Тедди",
+    "surname": "Сандерс",
+    "pic_path": "/static/images/ava_4.png",
+    "professions": "макро-историк специалист по массовой пропаганде"
+  }
+]
