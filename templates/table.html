@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="centered">
+        <h2 class="heading">Оформление каюты</h2>
+        <table>
+            <tr>
+                <td>Цвет стен</td>
+                <td>Эмблема</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="color-block {{ color }}"></div>
+                </td>
+                <td>
+                    <div class="image-block {{ age }}"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

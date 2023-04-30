@@ -82,6 +82,23 @@ def distribution():
     return render_template('distribution.html', astronauts=astronauts)
 
 
+@app.route('/table/<sex>/<int:age>')
+def table(sex, age):
+    if age < 21:
+        age_param = "child"
+        if sex == "male":
+            color_param = "lightblue"
+        else:
+            color_param = "lightcoral"
+    else:
+        age_param = "adult"
+        if sex == "male":
+            color_param = "blue"
+        else:
+            color_param = "red"
+    return render_template('table.html', color=color_param, age=age_param)
+
+
 if __name__ == '__main__':
     db_session.global_init("db/blogs.db")
     app.run()
