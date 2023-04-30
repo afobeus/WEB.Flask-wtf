@@ -59,6 +59,29 @@ def login():
     return render_template('login.html', title='Аварийный доступ', form=form)
 
 
+@app.route('/distribution')
+def distribution():
+    astronauts = [
+        {
+            "name": "Ридли",
+            "surname": "Скотт"
+        },
+        {
+            "name": "Энди",
+            "surname": "Уир"
+        },
+        {
+            "name": "Венката",
+            "surname": "Капур"
+        },
+        {
+            "name": "Тедди",
+            "surname": "Сандерс"
+        }
+    ]
+    return render_template('distribution.html', astronauts=astronauts)
+
+
 if __name__ == '__main__':
     db_session.global_init("db/blogs.db")
     app.run()
