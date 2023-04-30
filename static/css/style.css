@@ -12,13 +12,8 @@ form {
 }
 
 .miserable-image-text {
-    position: relative;
-}
-
-.miserable-image-text::before {
-    content: "";
     background-image: url("/static/images/MARS-2-7.png");
-    position: absolute;
-    left: 50px;
-    top: 50px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-left: 150px;
 }
